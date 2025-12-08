@@ -11,9 +11,9 @@ export default function Home () {
       <button onClick={() => setNumber(number +1)}>
         +1
       </button>
-      {number >= 10 && number < 20 && <p>keep going PUSSY!</p>}
-     {number >= 20 && number < 30 && <p>10 MORE NOW!</p>}
-      {number >= 30 && <p>GOOOOD BOY YOU DID IT!</p>}
+      {number >= 10 && number < 20 && <keep going!</p>}
+     {number >= 20 && number < 30 && <p>almost there</p>}
+      {number >= 30 && <p>YOU DID IT!</p>}
     </main>
   )
 }
