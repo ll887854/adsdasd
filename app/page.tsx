@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <main>
       <h1>Score: {number}</h1>
-      <h1>{text}</h1>
 
       <button onClick={() => setNumber(number + 1)}>
         +1
