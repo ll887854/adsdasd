@@ -3,11 +3,13 @@
 import { useState } from "react"
 
 export default function Home() {
-  const [number, setNumber] = useState(0)
+  const [number, setNumber] = useState(0) 
+  const [text, setText] = useState("click!!")
 
   return (
     <main>
       <h1>Score: {number}</h1>
+      <h1>{text}</h1>
 
       <button onClick={() => setNumber(number + 1)}>
         +1
