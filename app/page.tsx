@@ -1,6 +1,6 @@
-
 "use client"
 import { useState } from "react"
+import { styleText } from "util"
 export default function Home () {
   const [level, setLevel] = useState("start")
     const [number, setNumber] = useState(0)
@@ -47,6 +47,9 @@ export default function Home () {
               Oki you can go now just click me 
             </button> )}
             </div>
+             {number >= 300 && ( <button onClick={() => setLevel("secret")}>
+              psssst
+            </button> )}
           </div>
         )
       }
@@ -57,9 +60,29 @@ export default function Home () {
       </div>
       )
     }
-
-        
+    {level === "secret" &&
+    ( <div>
+      <h1>psst this is secret click the button to see the truth</h1>
       
+      <button onClick={() => setLevel("secret2")}>
+        click me 
+      </button>
+    </div>
+    )
+  }
+  {level === "secret2" &&
+  ( <div>
+    <h1>YOU ARE GAY!!!</h1>
+
+    <button onClick={() => {
+      setLevel("start")
+      setNumber(0)
+    }}>
+      reset
+    </button>
+  </div>
+  )
+}   
         </main>
       )
     }
